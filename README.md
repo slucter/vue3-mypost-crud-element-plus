@@ -1,6 +1,16 @@
-# vue-project
+# MY POST PROJECT
 
-This template should help get you started developing with Vue 3 in Vite.
+- Instance HTTP Axios
+- Vuex
+- CRUD
+- DYNAMIS COMPONENT
+- FRAMEWORK UI ELEMENT PLUS
+
+* On Develop
+
+- Create Post
+- Infinite Scroll
+- Validation Form
 
 ## Recommended IDE Setup
 
