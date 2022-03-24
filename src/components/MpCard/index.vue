@@ -106,7 +106,7 @@ export default {
                 await store.dispatch('global/deletePostById', cardDataCp.value.id)
                 ElNotification({
                     title: 'Success',
-                    message: `Success Deleting Post ${cardDataCp.id}`,
+                    message: `Success Deleting Post ${cardDataCp.value.id}`,
                     type: 'success',
                 })
             } catch (error) {
