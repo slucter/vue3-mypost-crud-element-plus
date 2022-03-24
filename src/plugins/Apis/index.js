@@ -2,8 +2,8 @@ import { http } from '../Axios/axios'
 
 // GET DATA
 
-export const getPost = () => {
-    return http.get('/posts')
+export const getPost = (params) => {
+    return http.get('/posts', { params: params })
 }
 export const getPostByUserId = (uid) => {
     return http.get('/posts', { params: { userId: uid } })

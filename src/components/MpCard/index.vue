@@ -72,7 +72,7 @@ export default {
         const cardDataCp = ref(null); 
         const store = useStore()
 
-        let { cardData, myData, navigate, editNavigate } = toRefs(props)
+        let { myData, navigate, editNavigate } = toRefs(props)
         watch(
             () => props.cardData,
             (val) => cardDataCp.value = val,
@@ -116,7 +116,6 @@ export default {
 
         return {
             handleColorFav, 
-            cardData, 
             myData, 
             navigate, 
             editNavigate, 

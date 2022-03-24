@@ -4,7 +4,7 @@
           <div class="mp-container">
               <el-row class="h-full">
                 <el-col :span="12" class="d-flex items-center justify-start">
-                    <router-link to="/"><div class="text-common text-light font-bold">Homepage</div></router-link>
+                    <router-link to="/"><div class="text-common text-light font-bold">{{ titlePage }}</div></router-link>
                 </el-col>
                 <el-col :span="12" class="d-flex items-center justify-end">
                     <el-space :size="20" wrap>
@@ -22,17 +22,24 @@
                                 </el-space>
                             </el-button>
                         </router-link>
-                        <router-link to="login" v-if="!isAuthenticated">
+                        <router-link to="/admin" v-if="isAuthenticated">
                             <el-button type="primary" size="large">
                                 <div class="text-common text-light font-medium">
-                                    Login
+                                    Admin
                                 </div>
                             </el-button>
                         </router-link>
-                        <router-link to="#" v-else>
+                        <router-link to="#" v-if="isAuthenticated">
                             <el-button @click.prevent="logout" type="primary" size="large">
                                 <div class="text-common text-light font-medium">
                                     Logout
+                                </div>
+                            </el-button>
+                        </router-link>
+                        <router-link to="login" v-else>
+                            <el-button type="primary" size="large">
+                                <div class="text-common text-light font-medium">
+                                    Login
                                 </div>
                             </el-button>
                         </router-link>
@@ -48,13 +55,15 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
-import { RouterView, RouterLink, useRouter } from 'vue-router'
+import { ref, onMounted, computed } from 'vue'
+import { RouterView, RouterLink, useRouter, useRoute } from 'vue-router'
 
 export default {
     setup () {
         let router = useRouter()
+        let route = useRoute()
         let isAuthenticated = ref(true)
+
         onMounted(() => {
             isAuthenticated.value = localStorage.getItem('userMyPost') !== null ? true : false
         })
@@ -62,9 +71,11 @@ export default {
             localStorage.clear()
             router.go()
         }
+        let titlePage = computed(() => route.fullPath === '/admin' ? 'Admin' : 'Homepage')
         return {
             isAuthenticated,
-            logout
+            logout,
+            titlePage
         }
     }
 }

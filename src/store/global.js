@@ -38,10 +38,10 @@ export default {
         getPostHome ({ commit }, payload) {
             return new Promise(async (resolve, reject) => {
                 try {
-                    let results = (await getPost()).data
+                    let results = (await getPost(payload)).data
                     let itemsFav = localStorage.getItem('favItems')
                     let fav = !itemsFav ? [] : JSON.parse(itemsFav)
-                    results = results.map((e, idx) => {
+                    results = results.map((e) => {
                         let inc = fav.findIndex((fvi) => fvi.id === e.id)
                         if (inc < 0) return e
                         return e = fav[inc]
