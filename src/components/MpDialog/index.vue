@@ -2,7 +2,7 @@
     <el-dialog
     v-model="openedDialog"
     :title="title"
-    width="30%"
+    :width="windowWidth < 760 ? '100%' : '30%'"
     :before-close="handleClose"
   >
     <slot />
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { ref, toRefs } from 'vue'
+import { ref, toRefs, computed } from 'vue'
 import { useRouter } from 'vue-router'
 export default {
     props: {
@@ -26,7 +26,8 @@ export default {
         return {
             openedDialog,
             title,
-            handleClose
+            handleClose,
+            windowWidth: computed(() => window.innerWidth)
         }
     }
 }
