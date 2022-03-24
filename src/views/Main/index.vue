@@ -48,6 +48,20 @@
             </el-row>
           </div>
       </el-header>
+      <router-link to="/admin/create" v-if="isAuthenticated">
+        <el-tooltip
+            class="box-item"
+            effect="dark"
+            content="Create New Post"
+            placement="left"
+        >
+            <el-button type="primary" size="large" class="mp-create-post-btn" circle>
+                <el-icon color="white" :size="20">
+                    <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ba633cb8=""><path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64h352z"></path></svg>
+                </el-icon>
+            </el-button>
+        </el-tooltip>
+      </router-link>
       <el-main>
           <router-view />
       </el-main>
@@ -82,4 +96,10 @@ export default {
 </script>
 
 <style scoped>
+.mp-create-post-btn {
+    position: fixed;
+    z-index: 9999;
+    right: 20px;
+    bottom: 20px;
+}
 </style>

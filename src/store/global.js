@@ -6,7 +6,9 @@ import {
     getPostByUserId,
 
     putPostId,
-    deletePostId
+    deletePostId,
+
+    createPost
 
 } from '../plugins/Apis/index'
 
@@ -138,6 +140,16 @@ export default {
             return new Promise(async (resolve, reject) => {
                 try {
                     let result = (await deletePostId(id)).data
+                    resolve(result)
+                } catch (error) {
+                    reject(error)
+                }
+            })
+        },
+        createPost ({commit}, payload) {
+            return new Promise(async (resolve, reject) => {
+                try {
+                    let result = (await createPost(payload)).data
                     resolve(result)
                 } catch (error) {
                     reject(error)

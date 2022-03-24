@@ -1,5 +1,11 @@
 import { http } from '../Axios/axios'
 
+// CREATE DATA
+
+export const createPost = (payload) => {
+    return http.get('/posts', payload)
+}
+
 // GET DATA
 
 export const getPost = (params) => {
