@@ -2,14 +2,16 @@
 
 - Instance HTTP Axios
 - Vuex
-- CRUD
+- CREATE POST
+- UPDATE POST
+- DELETE POST
+- READ POST One & Many
+- Infinite Scroll
 - DYNAMIS COMPONENT
 - FRAMEWORK UI ELEMENT PLUS
-- Infinite Scroll
 
 * On Develop
 
-- Create Post
 - Validation Form
 
 ## Recommended IDE Setup

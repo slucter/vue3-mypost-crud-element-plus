@@ -139,10 +139,4 @@ export default {
     width: 100%;
     height: 100%;
 }
-.mp-create-post-btn {
-    display: inline;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-}
 </style>
