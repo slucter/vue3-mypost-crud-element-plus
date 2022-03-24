@@ -7,12 +7,13 @@
 - DELETE POST
 - READ POST One & Many
 - Infinite Scroll
+- Validation Form
 - DYNAMIS COMPONENT
 - FRAMEWORK UI ELEMENT PLUS
 
 * On Develop
 
-- Validation Form
+- Responsive
 
 ## Recommended IDE Setup
 
