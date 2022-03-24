@@ -5,11 +5,11 @@
 - CRUD
 - DYNAMIS COMPONENT
 - FRAMEWORK UI ELEMENT PLUS
+- Infinite Scroll
 
 * On Develop
 
 - Create Post
-- Infinite Scroll
 - Validation Form
 
 ## Recommended IDE Setup
