@@ -6,6 +6,7 @@
     --light: #fff;
     --gray: #eeee;
 }
+
 * {
     font-family: 'Nunito', sans-serif;
 }
@@ -70,16 +71,16 @@ body {
 
 
 .text-common {
-    font-size: 1.125rem; /* 18px */
-    line-height: 1.75rem;
+    font-size: 16px; /* 18px */
+    line-height: 16px;
 }
 .text-xl {
-    font-size: 1.25rem; /* 20px */
-    line-height: 1.75rem; /* 28px */
+    font-size: 18px; /* 20px */
+    line-height: 26px; /* 28px */
 }
 .text-2xl {
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
+    font-size: 21px; /* 24px */
+    line-height: 28px; /* 32px */
 }
 .font-normal {   font-weight: 400; }
 .font-medium {   font-weight: 500; }
@@ -98,4 +99,38 @@ body {
 
 .border-bottom {
     border-bottom: 1px solid #eeee;
+}
+
+.no-mobile {
+    display: none !important;
+}
+.no-destop {
+    display: inherit;
+}
+.mobile-gap {
+    gap: 15px;
+}
+
+@media only screen and (min-width: 760px) {
+    .no-mobile {
+        display: flex !important;
+    }
+    .no-destop {
+        display: none !important;
+    }
+    .mobile-gap {
+        gap: inherit;
+    }
+    .text-common {
+        font-size: 18px; /* 18px */
+        line-height: 18px;
+    }
+    .text-xl {
+        font-size: 20px; /* 20px */
+        line-height: 28px; /* 28px */
+    }
+    .text-2xl {
+        font-size: 24px; /* 24px */
+        line-height: 32px; /* 32px */
+    }
 }

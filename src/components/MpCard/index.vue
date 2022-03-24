@@ -5,13 +5,13 @@
         </template>
         <template #default>
             <el-card shadow="hover">
-                <el-row :gutter="20">
-                    <el-col :span="5">
+                <el-row :gutter="20" class="mobile-gap">
+                    <el-col :xs="24" :sm="8" :md="5">
                         <div class="mp-thumb-wrap">
                             <img src="http://staiyapistakalar.ac.id/wp-content/plugins/penci-pennews-portfolio/images/no-thumbnail.jpg" alt="thubnail">
                         </div>
                     </el-col>
-                    <el-col :span="10">
+                    <el-col :xs="24" :sm="12" :md="11">
                         <el-space :size="10" wrap>
                             <router-link :to="navigate" class="text-2xl text-dark font-bold">
                                 {{ cardDataCp.title }}
@@ -21,7 +21,7 @@
                             </div>
                         </el-space>
                     </el-col>
-                    <el-col :span="9" class="d-flex justify-end items-center">
+                    <el-col :xs="24" :sm="4" :md="8" class="d-flex justify-end items-center">
                         <el-space :size="15">
                             <el-button type="text" @click="addToFav">
                                 <el-icon :color="handleColorFav" :size="30">
