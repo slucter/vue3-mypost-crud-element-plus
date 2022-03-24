@@ -8,12 +8,11 @@
 - READ POST One & Many
 - Infinite Scroll
 - Validation Form
+- Responsive
 - DYNAMIS COMPONENT
 - FRAMEWORK UI ELEMENT PLUS
 
-* On Develop
-
-- Responsive
+[Demo Website](https://loquacious-druid-a7c618.netlify.app/)
 
 ## Recommended IDE Setup
 
